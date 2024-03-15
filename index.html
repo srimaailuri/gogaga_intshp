@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Gogaga Holidays</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link  active" href="#">
+          Home
+          <span class="sr-only">(current)</span>
+        </a>
+        <a class="nav-link " href="#packages">Packages</a>
+        <a class="nav-link " href="#flights">flights</a>
+        <a class="nav-link " href="#hotels">hotels</a>
+        <a class="nav-link " href="#collections">collections</a>
+        
+      </div>
+  </div>
+  </nav>
+  <div class="Bg-Container">
+    <h1 class="CompanyName">Gogaga</h1>
+  </div>
+
+    <section id="packages">
+        <div class="container">
+            <h2 class="mt-5">Travel Packages</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="PackagePlacesImage" src="https://tse4.mm.bing.net/th?id=OIP.Y6egluHRRQICSCIu6gHB7AHaF6&pid=Api&P=0&h=180" alt="Package paris">
+                        <div class="card-body">
+                            <h5 class="card-title">paris</h5>
+                            <p class="card-text">Paris, often called the "City of Light," is a city renowned for its rich history, stunning architecture, and vibrant culture. </p>
+                            <a href="details.html" class="btn btn-primary">View More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- More cards here -->
+                <div class="col-md-4">
+                  <div class="card">
+                      <img class="PackagePlacesImage" src="https://thewowstyle.com/wp-content/uploads/2015/03/New-York-City-New-York.jpg" alt="Package America">
+                      <div class="card-body">
+                          <h5 class="card-title">America</h5>
+                          <p class="card-text">America offers a diverse range of destinations to visit, from vibrant cities to breathtaking natural wonders.</p>
+                          <a href="details.html" class="btn btn-primary">View More</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                    <img class="PackagePlacesImage" src="https://www.planetware.com/wpimages/2019/11/india-best-places-to-visit-agra.jpg" alt="Package India" >
+                    <div class="card-body">
+                        <h5 class="card-title">India</h5>
+                        <p class="card-text">India is a vast and diverse country with countless attractions to explore.choosing the location for your trip can be daunting. </p>
+                        <a href="details.html" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flights">
+      <div class="container">
+        <h1>Flight Search</h1>
+
+        <form id="flightSearchForm">
+          <div class="form-group">
+              <label for="departureCity">Departure City:</label>
+              <input type="text" class="form-control" id="departureCity" placeholder="Enter departureCity" required>
+          </div>
+          <div class="form-group">
+              <label for="destinationCity">Destination City:</label>
+              <input type="text" class="form-control" id="destinationCity" placeholder="Enter destinationCity" required>
+          </div>
+          <div class="form-group">
+              <label for="departureDate">Departure Date:</label>
+              <input type="date" class="form-control" id="departureDate" placeholder="Enter Departure Date" required>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="searchFlights()">Search Flights</button>
+      </form>
+
+    <div id="searchResults">
+        <!-- Flight search results will be displayed here -->
+    </div>
+
+    <h1>Book Flight</h1>
+    <form id="flightBookingForm" style="display: none;">
+      <label for="passengerName">Passenger Name:</label>
+              <input type="text" class="form-control" id="passengerName" placeholder="Enter passengerName" required>
+
+              <label for="passengerAge">Passenger Age:</label>
+              <input type="number" class="form-control" id="passengerAge" placeholder="Enter passengerAge" required>
+
+              <label for="numberOfSeats">Number of Seats:</label>
+              <input type="number" class="form-control" id="numberOfSeats" min="1" placeholder="Enter passengerAge" required>
+
+        
+        
+        <button type="button" class="btn btn-primary" onclick="bookFlight()">Book Flight Now</button>
+    </form>
+
+    <div id="bookingConfirmation" style="display: none;">
+        <p>Flight is booked!</p>
+    </div>
+    </div>
+    </section>
+
+    <section id="hotels">
+      <div class="container mt-5">
+        <h2>Hotel Booking</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Passenger Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="Enter age" required>
+            </div>
+            <div class="form-group">
+                <label for="rooms">Number of Rooms:</label>
+                <input type="number" class="form-control" id="rooms" placeholder="Enter number of rooms" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Stay:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Total Amount:</label>
+                <input type="text" class="form-control" id="amount" placeholder="Total amount" readonly>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="bookRoom()">Book Now</button>
+        </form>
+        <div id="bookingStatus" class="mt-3" style="display: none;"></div>
+    </div>
+    </section>
+
+    <section id="collections">
+      <div class="container">
+        <h2 class="mt-5">Collection packages</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="PackagePlacesImage" src="https://media.cntraveler.com/photos/58e7c96b72e4d21b0b662eaf/master/pass/trunk-bay-st-john-GettyImages-143686916.jpg" alt="Islands">
+                    <div class="card-body">
+                        <h5 class="card-title">Maldives</h5>
+                        <p class="card-text">Paris, often called the "City of Light," is a city renowned for its rich history, stunning architecture, and vibrant culture. </p>
+                        <a href="details.html" class="btn btn-primary">View More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- More cards here -->
+            <div class="col-md-4">
+              <div class="card">
+                  <img class="PackagePlacesImage" src="https://www.holidify.com/images/bgImages/MANALI.jpg" alt="Adeventures">
+                  <div class="card-body">
+                      <h5 class="card-title">Adventures</h5>
+                      <p class="card-text">America offers a diverse range of destinations to visit, from vibrant cities to breathtaking natural wonders.</p>
+                      <a href="details.html" class="btn btn-primary">View More</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+                <img class="PackagePlacesImage" src="https://www.godigit.com/content/dam/godigit/directportal/en/contenthm/hills-station-image.jpg" alt="HillStations" >
+                <div class="card-body">
+                    <h5 class="card-title">HillStations</h5>
+                    <p class="card-text">India is a vast and diverse country with countless attractions to explore.choosing the location for your trip can be daunting. </p>
+                    <a href="details.html" class="btn btn-primary">View More</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Gogaga Holidays</p>
+    </footer>
+
+    <script>
+      function bookRoom() {
+          // Get form values
+          var name = document.getElementById('name').value;
+          var age = document.getElementById('age').value;
+          var rooms = document.getElementById('rooms').value;
+          var date = document.getElementById('date').value;
+          var amount = calculateAmount(rooms); // Calculate total amount
+  
+          // Display booking status
+          document.getElementById('bookingStatus').innerHTML = "Room booked for " + name + ". Total amount: $" + amount + ". Date of stay: " + date;
+          document.getElementById('bookingStatus').style.display = "block";
+      }
+  
+      function calculateAmount(rooms) {
+          // Replace this with your own logic to calculate the total amount based on the number of rooms
+          // For demonstration purposes, let's assume the cost per room is $100
+          var costPerRoom = 100;
+          return rooms * costPerRoom;
+      }
+
+      function searchFlights() {
+        // Mock search results
+        var searchResults = [
+            { flightNumber: "ABC123", departureCity: "New York", destinationCity: "Los Angeles", departureDate: "2024-03-20", price: "$300" },
+            { flightNumber: "XYZ456", departureCity: "Los Angeles", destinationCity: "New York", departureDate: "2024-03-21", price: "$320" }
+        ];
+    
+        // Display search results
+        var resultsDiv = document.getElementById("searchResults");
+        resultsDiv.innerHTML = "<h2>Search Results</h2>";
+        for (var i = 0; i < searchResults.length; i++) {
+            var flight = searchResults[i];
+            resultsDiv.innerHTML += "<p>Flight Number: " + flight.flightNumber + "<br>Departure City: " + flight.departureCity + "<br>Destination City: " + flight.destinationCity + "<br>Departure Date: " + flight.departureDate + "<br>Price: " + flight.price + "</p>";
+        }
+    
+        // Show booking form
+        document.getElementById("flightBookingForm").style.display = "block";
+    }
+    
+    function bookFlight() {
+        // Hide booking form
+        document.getElementById("flightBookingForm").style.display = "none";
+        
+        // Show booking confirmation message
+        document.getElementById("bookingConfirmation").style.display = "block";
+    }
+    
+    
+  </script>
+</body>
+</html>

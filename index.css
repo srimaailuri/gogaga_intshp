@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color:#ffffff;
+}
+
+.Bg-Container{
+    background-image: url("http://amazingindiablog.in/wp-content/uploads/2015/05/ImageReader.jpg");
+    background-size:cover;
+    background-position: cover;
+    width:100%;
+    height:500px;
+}
+section {
+    padding: 20px;
+}
+.CompanyName{
+    text-align:center;
+    color: #fff;
+
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    height:400px;
+}
+.card-body{
+    height:50%
+}
+.PackagePlacesImage{
+    width:100%;
+    height:200px;
+}
+
+h2{
+    color:black;
+    text-align:center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    footer p {
+        font-size: 12px;
+    }
+}
